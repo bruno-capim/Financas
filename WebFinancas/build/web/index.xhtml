@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+        <link rel="stylesheet" href="css/estilos.css"></link>
+    </h:head>
+    <h:body>
+        <div id="inicio">
+         <h1><i>Tarefa javaWeb Orçamento</i></h1>
+        </div>
+        <h:form>
+            <div id="todosite">
+            <p:fieldset legend="Receita">
+                <p:outputLabel value="#{calculoFinancas.resp}" style="color: red; background-color: black; font-size: 25px"  ></p:outputLabel>
+                <p:panelGrid columns="2">
+                    <p:outputLabel value="Receita Mensal:" for="txtReceita"></p:outputLabel>
+                    <p:inputText id="txtReceita" value="#{calculoFinancas.receita}"></p:inputText>
+                </p:panelGrid> 
+            </p:fieldset> 
+            <p:fieldset legend="Categorias">
+                <p:panelGrid columns="3">
+                    <p:outputLabel value="Categoria"></p:outputLabel>
+                    <p:outputLabel value="%"></p:outputLabel>
+                    <p:outputLabel value="Valor em R$"></p:outputLabel>
+                    
+                    <p:outputLabel value="Alimentação:" for="txtPorcAlimentacao"></p:outputLabel>
+                    <p:inputText id="txtPorcAlimentacao" value="#{calculoFinancas.porcAlimentacao}"></p:inputText>
+                    <p:outputLabel value="#{calculoFinancas.valorAlimentacao}" style="color: red"></p:outputLabel>
+                
+                    <p:outputLabel value="Transporte:" for="txtPorcTransporte"></p:outputLabel>
+                    <p:inputText id="txtPorcTransporte" value="#{calculoFinancas.porcTransporte}"></p:inputText>
+                    <p:outputLabel value="#{calculoFinancas.valorTransporte}" style="color: red"></p:outputLabel>
+                    
+                    <p:outputLabel value="Saúde:" for="txtPorcSaude"></p:outputLabel>
+                    <p:inputText id="txtPorcSaude" value="#{calculoFinancas.porcSaude}"></p:inputText>
+                    <p:outputLabel value="#{calculoFinancas.valorSaude}" style="color: red"></p:outputLabel>
+                    
+                    <p:outputLabel value="Moradia:" for="txtPorcMoradia"></p:outputLabel>
+                    <p:inputText id="txtPorcMoradia" value="#{calculoFinancas.porcMoradia}"></p:inputText>
+                    <p:outputLabel value="#{calculoFinancas.valorMoradia}" style="color: red"></p:outputLabel>
+                    
+                    <p:outputLabel value="Compras Gerais:" for="txtPorcCompras"></p:outputLabel>
+                    <p:inputText id="txtPorcCompras" value="#{calculoFinancas.porcCompras}"></p:inputText>
+                    <p:outputLabel value="#{calculoFinancas.valorCompras}" style="color: red"></p:outputLabel>
+                    
+                    <p:outputLabel value="Fundo de Reserva:" for="txtPorcReserva"></p:outputLabel>
+                    <p:inputText id="txtPorcReserva" value="#{calculoFinancas.porcReserva}"></p:inputText>
+                    <p:outputLabel value="#{calculoFinancas.valorReserva}" style="color: red"></p:outputLabel>
+                    
+                    <p:outputLabel value="Outros:" for="txtPorcOutros"></p:outputLabel>
+                    <p:inputText id="txtPorcOutros" value="#{calculoFinancas.porcOutros}"></p:inputText>
+                    <p:outputLabel value="#{calculoFinancas.valorOutros}" style="color: red"></p:outputLabel>
+                </p:panelGrid>
+            </p:fieldset>
+            <p:fieldset>
+                <p:commandButton value="Calcular" action="#{calculoFinancas.calcular()}" update="@form"></p:commandButton>
+                <p:commandButton value="Limpar" action="#{calculoFinancas.limpar()}" update="@form"></p:commandButton>
+                
+            </p:fieldset> 
+                </div>
+        </h:form>
+    </h:body>
+</html>
+

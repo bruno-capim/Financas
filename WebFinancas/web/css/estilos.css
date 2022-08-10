@@ -1,0 +1,27 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12/05/2020, 23:01:49
+    Author     : Bruno Antunes
+*/
+#todosite{
+    background-color: green;
+    width: 1200px;
+    height: 800px;
+    margin: auto;
+}
+#inicio{
+    color: green;
+    width: 1200px;
+    border: 2px solid green;
+    border-radius: 12px;
+    text-align: center;  
+    margin: auto;
+}
+#pop{
+    background-color: red;
+}
+
